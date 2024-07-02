@@ -1,8 +1,8 @@
+import "module-alias/register"
 import express from "express";
 import path from "path";
-import data from "@/controller/data";
+import data from "@data/controller/data";
 const app = express();
-import "module-alias/register"
 
 
 app.use(express.static(path.join(__dirname, 'public')));
