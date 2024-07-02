@@ -5,33 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Express JS - Ejs - vercel</title>
-    <style>
-        div {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        h1 {
-            color: darkgoldenrod;
-        }
-    </style>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="images/logo.webp" type="image/x-icon">
 </head>
 
 <body>
     <div>
         <h1>Express-EJS-Vercel</h1>
-        <p>
+        <span>
             <%= title %>
-        </p>
+        </span>
+
+        <br>
+        <button class="btn">Increase Count</button>
+        <span style="font-size: large;" id="count">count is: 0</span>
+
+
+        <script>
+            let x = 1;
+            const btn = document.querySelector('button');
+            const countElement = document.getElementById("count");
+
+            btn.addEventListener('click', () => {
+                countElement.textContent = "count is: " + x++;
+            })
+        </script>
     </div>
 </body>
 
