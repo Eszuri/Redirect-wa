@@ -16,6 +16,7 @@ module.exports = {
         filename: 'index.js'
     },
     resolve: {
+        modules: ['src'],
         extensions: ['.ts', '.js'],
         alias: {
             "@root": path.resolve(__dirname, "./src"),
