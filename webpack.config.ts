@@ -1,6 +1,8 @@
 import path from 'path';
 import nodeExternals from 'webpack-node-externals';
 import CopyPlugin from "copy-webpack-plugin";
+import isCompiled from './plugins/isCompiled';
+
 const {
     NODE_ENV = 'production',
 } = process.env;
@@ -36,5 +38,6 @@ module.exports = {
                 { from: "./src/views", to: "views" },
             ],
         }),
+        new isCompiled()
     ],
 }
