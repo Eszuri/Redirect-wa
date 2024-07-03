@@ -1,7 +1,7 @@
 import "module-alias/register"
 import express from "express";
 import path from "path";
-import data from "./controller/data";
+import data from "@root/controller/data";
 const app = express();
 
 
