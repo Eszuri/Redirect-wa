@@ -1,7 +1,7 @@
 import "module-alias/register"
 import express from "express";
 import path from "path";
-import data from "@data/controller/data";
+import data from "./controller/data";
 const app = express();
 
 
@@ -15,8 +15,13 @@ app.get("/", (req, res) => {
     res.render('index', { title: "This Is Template Engine" })
 });
 
+// endpoint test
 app.get("/test", data)
 
+
+// "_moduleAliases": {
+//     "@data": "build"
+// }
 
 
 app.listen(3000, () => {

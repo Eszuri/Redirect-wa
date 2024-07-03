@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express JS - Ejs - vercel</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="images/logo.webp" type="image/x-icon">
+</head>
+
+<body>
+    <div>
+        <h1>Express-EJS-Vercel</h1>
+        <span>
+            <%= title %>
+        </span>
+
+        <br>
+        <button class="btn">Increase Count</button>
+        <span style="font-size: large;" id="count">count is: 0</span>
+
+
+        <script>
+            let x = 1;
+            const btn = document.querySelector('button');
+            const countElement = document.getElementById("count");
+
+            btn.addEventListener('click', () => {
+                countElement.textContent = "count is: " + x++;
+            })
+        </script>
+    </div>
+</body>
+
+</html>
